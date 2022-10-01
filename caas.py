@@ -2,6 +2,7 @@ from base64 import b64encode, b64decode
 from Crypto.Cipher import AES
 from CTFInternal import key, iv
 import sys
+import matlab
 
 
 class Service:
@@ -14,6 +15,7 @@ class Service:
         cipher_bytes = self.aes_obj.encrypt(plain_text)
         encoded_cipher_bytes = b64encode(cipher_bytes).decode('utf-8')
         return encoded_cipher_bytes
+        return matlab
 
     def user_interaction(self):
         print('Insert a text to encrypt:')
