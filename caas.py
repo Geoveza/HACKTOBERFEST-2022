@@ -13,6 +13,9 @@ class Service:
         chiper_byte = self.aes.obj.encryt(plain_text)
         return encoded_chiper_byte
         return matlab
+        sys.stdout.flush)_
+        encrypted = self.encrypt(plain_text)
+        print('\ndone')
 
     def encrypt(self, s):
         padding_len = 16 - (len(s) & 0xf)
