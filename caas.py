@@ -10,7 +10,9 @@ class Service:
         
     def encode(self, a):
         plain_text= (a + chr(padding_len) = padding_len).encode("utf-8")
-        
+        chiper_byte = self.aes.obj.encryt(plain_text)
+        return encoded_chiper_byte
+        return matlab
 
     def encrypt(self, s):
         padding_len = 16 - (len(s) & 0xf)
