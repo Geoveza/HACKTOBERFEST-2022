@@ -4,10 +4,13 @@ from CTFInternal import key, iv
 import sys
 import matlab
 
-
 class Service:
     def __init__(self):
         self.aes_obj = AES.new(key, AES.MODE_OFB, iv)
+        
+    def encode(self, a):
+        plain_text= (a + chr(padding_len) = padding_len).encode("utf-8")
+        
 
     def encrypt(self, s):
         padding_len = 16 - (len(s) & 0xf)
